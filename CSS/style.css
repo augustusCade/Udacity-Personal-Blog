@@ -1,0 +1,80 @@
+.container{
+    display:grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 250px 600px;
+    height: 100vh;
+    grid-template-areas: 
+    "hd hd"
+    "sd sd"
+    "main main"
+    "ft ft";
+    background: #ffaa9c;
+  }
+  .cardBox{
+    display: grid;
+    grid-gap: 10px;
+      grid-template-columns: repeat(2,50% ) ;
+      grid-template-rows: repeat(2,auto);
+  }
+  .one{
+    background-image: url('Images/nervousBreakdown.jpg');
+    background-size: contain;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two{
+    background-image: url('Images/test.jpg');
+    background-size: contain;
+    grid-column: col 2/ span 2;
+  }
+  .three{
+    background-image: url('Images/test.jpg');
+    background-size: contain;
+    grid-column: 2;
+      grid-row: 2;
+  }
+  .four{
+    background-image: url('Images/test.jpg');
+    background-size: contain;
+    grid-column: col 3 / span 2;
+    grid-row: row;
+  }
+  
+  .box{
+      border: 1px solid #e6715f;
+      padding: 10px;
+      
+      }
+  .header{
+      grid-area: hd;
+    }
+  .footer{
+      grid-area: ft;  
+    }
+  .sidebar{
+      grid-area: sd;
+    }
+  .content{
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+          grid-template-columns: repeat(4, [col] 50% ) ;
+          grid-template-rows: repeat(2, [row] auto  );
+          background-color: #fff;
+          color: #444;
+    }
+  
+  /* Widescreen*/
+  @media(min-width:900px) {
+  .container{
+        display:grid;
+        height: 100vh;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 250px 600px;
+        grid-template-areas: 
+        "hd hd hd hd hd hd hd hd"
+        "sd main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+    }
+  }
