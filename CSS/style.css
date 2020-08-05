@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 
-.h3{
-  text-align: center;
-}
-
 .container {
   display:grid;
     grid-template-columns: 300px 300px 300px;
@@ -36,10 +32,12 @@
   grid-area: hd;
   background-color: #9cf1ff;
   text-transform: uppercase;
+  text-align: center;
 }
 .footer {
   grid-area: ft;
   background-color: #9cc0ff;
+  text-align: center;
 }
 .photoBox{
   width: 250px;
