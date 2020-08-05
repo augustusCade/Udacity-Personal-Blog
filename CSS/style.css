@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
 .container {
   display:grid;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 250px 600px;
+    grid-template-rows: 20vh 600px;
     height: 100vh;
     grid-template-areas: 
     "hd hd"
@@ -9,15 +11,18 @@
     "main main"
     "ft ft";
     background: #ffaa9c;
+    font-family: 'Source Code Pro', monospace;
   }
 .cardBox {
   display: grid;
-  grid-gap: 10px;
+  padding: 5px;
+  gap: 5px;
   grid-template-columns: repeat(2, 50%);
   grid-auto-rows: auto;
 }
 .card {
-  background: pink;
+  background: white;
+  border-radius: 2%;
 }
 .box {
   border: 1px solid #e6715f;
@@ -25,20 +30,28 @@
 }
 .header {
   grid-area: hd;
+  background-color: #9cf1ff;
 }
 .footer {
   grid-area: ft;
+  background-color: #9cc0ff;
+}
+.photoBox{
+  width: 250px;
+  height: 150px;
+  border: 1px solid #e65d48;
+  background: #ffaa9c;
 }
 .sidebar {
   grid-area: sd;
-  background: lightgreen;
+  background: #ffdb9c;
+  text-transform: uppercase;
 }
 .content {
   grid-area: main;
   display: grid;
   /*grid-template-columns: 1fr 1fr; */
   grid-gap: 10px;
-  background-color: #fff;
   color: #444;
 }
 
@@ -48,7 +61,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 250px 600px;
+    grid-template-rows: 10% 80% 10%;
     grid-template-areas:
       "hd hd hd hd"
       "sd main main main"
