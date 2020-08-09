@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
-
+/* Default Viewport for Mobile */
 .container {
   display:grid;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 20vh 600px;
+    /* grid-template-rows: 20vh 600px; */
+    grid-template-rows: 7em 13em 80% 7em;
     height: 100vh;
     grid-template-areas: 
     "hd hd"
@@ -15,7 +16,8 @@
   }
 .cardBox {
   display: grid;
-  padding: 2px;
+  padding: 20px;
+  justify-content: center;
   gap: 20px;
   grid-template-columns: repeat(2, 50%);
   grid-auto-rows: auto;
@@ -33,6 +35,7 @@
   background-color: #9cf1ff;
   text-transform: uppercase;
   text-align: center;
+  justify-content: center;
 }
 .footer {
   grid-area: ft;
