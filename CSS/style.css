@@ -26,6 +26,10 @@
   background: #cc877d;
   border-radius: 2%;
 }
+.one{
+  background-image: url('Images/omg i got it.jpg');
+  background-size: contain;
+}
 .box {
   border: 1px solid #e6715f;
   padding: 10px;
