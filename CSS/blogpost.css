@@ -83,8 +83,8 @@ h3{
   background: #ffaa9c;
 }
 
-/* Widescreen*/
-@media (min-width: 900px) {
+/* Normal screens*/
+@media (min-width: 901px) and (max-width: 2400px) {
   .container {
     display: grid;
     height: 100vh;
@@ -96,3 +96,16 @@ h3{
       "ft ft ft ft";
   }
 }
+
+@media (min-width: 2400px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 10vh 80% 10vh;
+    grid-template-areas:
+      "hd hd hd hd hd hd"
+      "sd main main main main main"
+      "ft ft ft ft ft ft";
+  }
+} 
