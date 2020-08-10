@@ -97,6 +97,8 @@ h3{
   }
 }
 
+/* The responsiveness for widescreen could be so much better if the columns of content in the grid could just expand on rows, but I'm not sure how to make something like this happen.  */
+
 @media (min-width: 2400px) {
   .container {
     display: grid;
