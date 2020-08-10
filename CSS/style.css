@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 /* Default Viewport for Mobile */
 .container {
-  display:grid;
+    display:grid;
+    position: relative;
     grid-template-columns: 300px 300px 300px;
     /* grid-template-rows: 20vh 600px; */
     grid-template-rows: 10vh 20vh 70% 10vh;
@@ -10,7 +11,6 @@
     "sd sd"
     "main main"
     "ft ft";
-    background: #ffaa9c;
     font-family: 'Source Code Pro', monospace;
   }
 .cardBox {
@@ -55,20 +55,20 @@ h3{
 }
 .footer {
   grid-area: ft;
+  position: absolute;
   background-color: #9cc0ff;
   text-align: center;
+  width: inherit;
+  right: 0;
+  left: 0;
 }
 .photoBox{
   display: flex;
-  justify-content: center;
   border: 1px solid #e65d48;
   background: #ffaa9c;
   width: auto;
 }
-photobox img{
-  height: 100%;
-  justify-content: center;
-}
+
 .sidebar {
   grid-area: sd;
   background: #ffdb9c;
@@ -78,6 +78,7 @@ photobox img{
   grid-area: main;
   display: grid;
   grid-gap: 10px;
+  background: #ffaa9c;
 }
 
 /* Widescreen*/
