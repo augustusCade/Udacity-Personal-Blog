@@ -4,7 +4,7 @@
   display:grid;
     grid-template-columns: 300px 300px 300px;
     /* grid-template-rows: 20vh 600px; */
-    grid-template-rows: 7em 13em 80% 7em;
+    grid-template-rows: 10vh 20vh 60vh 10vh;
     height: 100vh;
     grid-template-areas: 
     "hd hd"
@@ -24,11 +24,18 @@
 }
 .card {
   background: #cc877d;
+  justify-content: center;
   border-radius: 2%;
+  
 }
-.one{
-  background-image: url('Images/omg i got it.jpg');
-  background-size: contain;
+/* Need to figure out why images are not aligning in the center */
+img{
+  margin: 0 auto;
+  height: 20vh;
+  width: 40vw;
+}
+h3{
+  text-align: center;
 }
 .box {
   border: 1px solid #e6715f;
@@ -69,7 +76,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 10vh 80vh 10vh;
     grid-template-areas:
       "hd hd hd hd"
       "sd main main main"
