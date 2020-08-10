@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+/* Default Viewport for Mobile */
+.container {
+    display:grid;
+    position: relative;
+    grid-template-columns: 300px 300px 300px;
+    /* grid-template-rows: 20vh 600px; */
+    grid-template-rows: 10vh 20vh 70% 10vh;
+    grid-template-areas: 
+    "hd hd"
+    "sd sd"
+    "main main"
+    "ft ft";
+    font-family: 'Source Code Pro', monospace;
+  }
+.cardBox {
+  display: grid;
+  padding: 20px;
+  justify-content: center;
+  gap: 20px;
+  grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: auto;
+}
+.card {
+  background: #cc877d;
+  justify-content: center;
+  border-radius: 2%;
+  
+}
+/* Need to figure out why images are not aligning in the center */
+img{
+  margin: 0 auto;
+  height: 20vh;
+  width: 40vw;
+  align-content: center;
+  justify-content: center;
+  border-radius: 2%;
+  display: flex;
+  
+}
+h3{
+  text-align: center;
+  font-size: x-large;
+}
+.box {
+  border: 1px solid #e6715f;
+  padding: 10px;
+}
+.header {
+  grid-area: hd;
+  background-color: #9cf1ff;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+}
+.footer {
+  grid-area: ft;
+  position: absolute;
+  background-color: #9cc0ff;
+  text-align: center;
+  width: inherit;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+.photoBox{
+  display: flex;
+  border: 1px solid #e65d48;
+  background: #ffaa9c;
+  width: auto;
+}
+
+.sidebar {
+  grid-area: sd;
+  background: #ffdb9c;
+  text-transform: uppercase;
+}
+.content {
+  grid-area: main;
+  display: grid;
+  grid-gap: 10px;
+  background: #ffaa9c;
+}
+
+/* Widescreen*/
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 10vh 80% 10vh;
+    grid-template-areas:
+      "hd hd hd hd"
+      "sd main main main"
+      "ft ft ft ft";
+  }
+}
