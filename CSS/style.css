@@ -59,11 +59,11 @@ h3{
   text-align: center;
 }
 .photoBox{
-  grid-area: main;
   display: flex;
   justify-content: center;
   border: 1px solid #e65d48;
   background: #ffaa9c;
+  width: auto;
 }
 photobox img{
   height: 100%;
