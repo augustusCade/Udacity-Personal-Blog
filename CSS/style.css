@@ -3,7 +3,6 @@
 .container {
     display:grid;
     position: relative;
-    grid-template-columns: 300px 300px 300px;
     /* grid-template-rows: 20vh 600px; */
     grid-template-rows: 10vh 20vh 70% 10vh;
     grid-template-areas: 
@@ -15,23 +14,24 @@
   }
 .cardBox {
   display: grid;
-  padding: 20px;
+  padding: 20px; 
   justify-content: center;
   gap: 20px;
-  grid-template-columns: repeat(2, 50%);
+  /* grid-template-columns: repeat(2,calc(50% - 20px)); */
   grid-auto-rows: auto;
 }
 .card {
   background: #cc877d;
   justify-content: center;
+  padding: 20px;
   border-radius: 2%;
   
 }
 /* Need to figure out why images are not aligning in the center */
 img{
   margin: 0 auto;
-  height: 20vh;
-  width: 40vw;
+  height: auto;
+  width: 100%;
   align-content: center;
   justify-content: center;
   border-radius: 2%;
@@ -47,9 +47,11 @@ h3{
   padding: 10px;
 }
 .header {
+  display: flex;
   grid-area: hd;
   background-color: #9cf1ff;
   text-transform: uppercase;
+  align-items: center;
   text-align: center;
   justify-content: center;
 }
@@ -84,10 +86,9 @@ h3{
 }
 
 /* Normal screens*/
-@media (min-width: 901px) and (max-width: 2400px) {
+/* @media (min-width: 901px) and (max-width: 2400px) {
   .container {
     display: grid;
-    height: 100vh;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 10vh 80% 10vh;
     grid-template-areas:
@@ -95,19 +96,25 @@ h3{
       "sd main main main"
       "ft ft ft ft";
   }
-}
+  .cardBox{
+    grid-template-columns: repeat(2,calc(50% - 20px));
+  }
+} */
+
 
 /* The responsiveness for widescreen could be so much better if the columns of content in the grid could just expand on rows, but I'm not sure how to make something like this happen.  */
 
-@media (min-width: 2400px) {
+@media (min-width: 901px) {
   .container {
     display: grid;
-    height: 100vh;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 10vh 80% 10vh;
     grid-template-areas:
       "hd hd hd hd hd hd"
       "sd main main main main main"
       "ft ft ft ft ft ft";
+  }
+  .cardBox{
+    grid-template-columns: repeat(2,calc(50% - 20px));
   }
 } 
